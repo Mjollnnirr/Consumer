@@ -1,0 +1,12 @@
+/Users/mjollnnirr/Projects/Consumer/Exceptions/bin/Debug/net6.0/Exceptions.deps.json
+/Users/mjollnnirr/Projects/Consumer/Exceptions/bin/Debug/net6.0/Exceptions.dll
+/Users/mjollnnirr/Projects/Consumer/Exceptions/bin/Debug/net6.0/Exceptions.pdb
+/Users/mjollnnirr/Projects/Consumer/Exceptions/obj/Debug/net6.0/Exceptions.csproj.AssemblyReference.cache
+/Users/mjollnnirr/Projects/Consumer/Exceptions/obj/Debug/net6.0/Exceptions.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mjollnnirr/Projects/Consumer/Exceptions/obj/Debug/net6.0/Exceptions.AssemblyInfoInputs.cache
+/Users/mjollnnirr/Projects/Consumer/Exceptions/obj/Debug/net6.0/Exceptions.AssemblyInfo.cs
+/Users/mjollnnirr/Projects/Consumer/Exceptions/obj/Debug/net6.0/Exceptions.csproj.CoreCompileInputs.cache
+/Users/mjollnnirr/Projects/Consumer/Exceptions/obj/Debug/net6.0/Exceptions.dll
+/Users/mjollnnirr/Projects/Consumer/Exceptions/obj/Debug/net6.0/refint/Exceptions.dll
+/Users/mjollnnirr/Projects/Consumer/Exceptions/obj/Debug/net6.0/Exceptions.pdb
+/Users/mjollnnirr/Projects/Consumer/Exceptions/obj/Debug/net6.0/ref/Exceptions.dll

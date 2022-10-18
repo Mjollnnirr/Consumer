@@ -1,0 +1,12 @@
+/Users/mjollnnirr/Projects/Consumer/Entity/bin/Debug/net6.0/Entity.deps.json
+/Users/mjollnnirr/Projects/Consumer/Entity/bin/Debug/net6.0/Entity.dll
+/Users/mjollnnirr/Projects/Consumer/Entity/bin/Debug/net6.0/Entity.pdb
+/Users/mjollnnirr/Projects/Consumer/Entity/obj/Debug/net6.0/Entity.csproj.AssemblyReference.cache
+/Users/mjollnnirr/Projects/Consumer/Entity/obj/Debug/net6.0/Entity.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mjollnnirr/Projects/Consumer/Entity/obj/Debug/net6.0/Entity.AssemblyInfoInputs.cache
+/Users/mjollnnirr/Projects/Consumer/Entity/obj/Debug/net6.0/Entity.AssemblyInfo.cs
+/Users/mjollnnirr/Projects/Consumer/Entity/obj/Debug/net6.0/Entity.csproj.CoreCompileInputs.cache
+/Users/mjollnnirr/Projects/Consumer/Entity/obj/Debug/net6.0/Entity.dll
+/Users/mjollnnirr/Projects/Consumer/Entity/obj/Debug/net6.0/refint/Entity.dll
+/Users/mjollnnirr/Projects/Consumer/Entity/obj/Debug/net6.0/Entity.pdb
+/Users/mjollnnirr/Projects/Consumer/Entity/obj/Debug/net6.0/ref/Entity.dll

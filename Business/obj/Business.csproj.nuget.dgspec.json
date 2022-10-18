@@ -1,0 +1,321 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/mjollnnirr/Projects/Consumer/Business/Business.csproj": {}
+  },
+  "projects": {
+    "/Users/mjollnnirr/Projects/Consumer/Business/Business.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/mjollnnirr/Projects/Consumer/Business/Business.csproj",
+        "projectName": "Business",
+        "projectPath": "/Users/mjollnnirr/Projects/Consumer/Business/Business.csproj",
+        "packagesPath": "/Users/mjollnnirr/.nuget/packages/",
+        "outputPath": "/Users/mjollnnirr/Projects/Consumer/Business/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/mjollnnirr/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/mjollnnirr/Projects/Consumer/DataAccess/DataAccess.csproj": {
+                "projectPath": "/Users/mjollnnirr/Projects/Consumer/DataAccess/DataAccess.csproj"
+              },
+              "/Users/mjollnnirr/Projects/Consumer/Entity/Entity.csproj": {
+                "projectPath": "/Users/mjollnnirr/Projects/Consumer/Entity/Entity.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/mjollnnirr/Projects/Consumer/Core/Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/mjollnnirr/Projects/Consumer/Core/Core.csproj",
+        "projectName": "Core",
+        "projectPath": "/Users/mjollnnirr/Projects/Consumer/Core/Core.csproj",
+        "packagesPath": "/Users/mjollnnirr/.nuget/packages/",
+        "outputPath": "/Users/mjollnnirr/Projects/Consumer/Core/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/mjollnnirr/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/mjollnnirr/Projects/Consumer/Entity/Entity.csproj": {
+                "projectPath": "/Users/mjollnnirr/Projects/Consumer/Entity/Entity.csproj"
+              },
+              "/Users/mjollnnirr/Projects/Consumer/Exceptions/Exceptions.csproj": {
+                "projectPath": "/Users/mjollnnirr/Projects/Consumer/Exceptions/Exceptions.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.9, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/mjollnnirr/Projects/Consumer/DataAccess/DataAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/mjollnnirr/Projects/Consumer/DataAccess/DataAccess.csproj",
+        "projectName": "DataAccess",
+        "projectPath": "/Users/mjollnnirr/Projects/Consumer/DataAccess/DataAccess.csproj",
+        "packagesPath": "/Users/mjollnnirr/.nuget/packages/",
+        "outputPath": "/Users/mjollnnirr/Projects/Consumer/DataAccess/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/mjollnnirr/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/mjollnnirr/Projects/Consumer/Core/Core.csproj": {
+                "projectPath": "/Users/mjollnnirr/Projects/Consumer/Core/Core.csproj"
+              },
+              "/Users/mjollnnirr/Projects/Consumer/Entity/Entity.csproj": {
+                "projectPath": "/Users/mjollnnirr/Projects/Consumer/Entity/Entity.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.9, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/mjollnnirr/Projects/Consumer/Entity/Entity.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/mjollnnirr/Projects/Consumer/Entity/Entity.csproj",
+        "projectName": "Entity",
+        "projectPath": "/Users/mjollnnirr/Projects/Consumer/Entity/Entity.csproj",
+        "packagesPath": "/Users/mjollnnirr/.nuget/packages/",
+        "outputPath": "/Users/mjollnnirr/Projects/Consumer/Entity/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/mjollnnirr/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/mjollnnirr/Projects/Consumer/Exceptions/Exceptions.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/mjollnnirr/Projects/Consumer/Exceptions/Exceptions.csproj",
+        "projectName": "Exceptions",
+        "projectPath": "/Users/mjollnnirr/Projects/Consumer/Exceptions/Exceptions.csproj",
+        "packagesPath": "/Users/mjollnnirr/.nuget/packages/",
+        "outputPath": "/Users/mjollnnirr/Projects/Consumer/Exceptions/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/mjollnnirr/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
