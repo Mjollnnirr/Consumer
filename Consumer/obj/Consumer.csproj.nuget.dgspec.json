@@ -45,6 +45,76 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/mjollnnirr/Projects/Consumer/CommonData/CommonData.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/mjollnnirr/Projects/Consumer/CommonData/CommonData.csproj",
+        "projectName": "CommonData",
+        "projectPath": "/Users/mjollnnirr/Projects/Consumer/CommonData/CommonData.csproj",
+        "packagesPath": "/Users/mjollnnirr/.nuget/packages/",
+        "outputPath": "/Users/mjollnnirr/Projects/Consumer/CommonData/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/mjollnnirr/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/mjollnnirr/Projects/Consumer/Entity/Entity.csproj": {
+                "projectPath": "/Users/mjollnnirr/Projects/Consumer/Entity/Entity.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -91,6 +161,9 @@
               "/Users/mjollnnirr/Projects/Consumer/Business/Business.csproj": {
                 "projectPath": "/Users/mjollnnirr/Projects/Consumer/Business/Business.csproj"
               },
+              "/Users/mjollnnirr/Projects/Consumer/CommonData/CommonData.csproj": {
+                "projectPath": "/Users/mjollnnirr/Projects/Consumer/CommonData/CommonData.csproj"
+              },
               "/Users/mjollnnirr/Projects/Consumer/DataAccess/DataAccess.csproj": {
                 "projectPath": "/Users/mjollnnirr/Projects/Consumer/DataAccess/DataAccess.csproj"
               },
@@ -110,6 +183,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.9, )"

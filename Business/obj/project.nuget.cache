@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "3Dg9tynQANyCkFZNL6uhi+5ddlc9rn9UsTA2wWyV9k00UTH73Jm7/JMkg9igKbLOybfOi8jNOKG+RwbbgdsYHA==",
+  "dgSpecHash": "s5mNAA/jUol44HtHWchfyJ/d1VTuzCiLXJuMZcH4V434bvrRqa19PIgqw4zhhDL+A7aRakT2tBluH/iEL5xTtA==",
   "success": true,
   "projectFilePath": "/Users/mjollnnirr/Projects/Consumer/Business/Business.csproj",
   "expectedPackageFiles": [
-    "/Users/mjollnnirr/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",
+    "/Users/mjollnnirr/.nuget/packages/automapper/12.0.0/automapper.12.0.0.nupkg.sha512",
+    "/Users/mjollnnirr/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.0/automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
+    "/Users/mjollnnirr/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/Users/mjollnnirr/.nuget/packages/microsoft.data.sqlclient/2.1.4/microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "/Users/mjollnnirr/.nuget/packages/microsoft.data.sqlclient.sni.runtime/2.1.1/microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "/Users/mjollnnirr/.nuget/packages/microsoft.entityframeworkcore/6.0.9/microsoft.entityframeworkcore.6.0.9.nupkg.sha512",

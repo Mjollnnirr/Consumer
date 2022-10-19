@@ -1,9 +1,11 @@
-﻿using Business.Implementations;
+﻿using System;
+using System.Collections.Generic;
+using AutoMapper;
+using Business.Implementations;
 using Business.Services;
+using CommonData.Profiles;
 using DataAccess.Db;
 using DataAccess.UOW;
-//using DataAccess.DbReposiotries;
-//using DataAccess.DbServices;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -19,9 +21,15 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddScoped<UnitOfWork>();
+builder.Services.AddAutoMapper(configs =>
+{
+    configs.AddProfile(typeof(MapperProfile));
+});
+
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 builder.Services.AddScoped<IEmployeeService, EmployeeRepository>();
+builder.Services.AddScoped<IDepartmentService, DepartmentRepository>();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
 {

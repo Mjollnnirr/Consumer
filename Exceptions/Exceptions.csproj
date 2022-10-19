@@ -8,8 +8,10 @@
 
   <ItemGroup>
     <None Remove="EntityExveptions\" />
+    <None Remove="ProgramExceptions\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="EntityExveptions\" />
+    <Folder Include="ProgramExceptions\" />
   </ItemGroup>
 </Project>

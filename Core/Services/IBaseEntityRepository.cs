@@ -4,7 +4,7 @@ using Entity.Base;
 
 namespace Core.Services;
 
-public interface IBaseEntityRepository<T> : IDisposable
+public interface IBaseEntityRepository<T>
     where T : class, IEntity, new()
 {
     Task<T> Get(
@@ -15,9 +15,8 @@ public interface IBaseEntityRepository<T> : IDisposable
         Func<IQueryable<T>, IOrderedQueryable<T>>? orderBy = null,
         int skip = 0, int take = int.MaxValue,
         params string[] includes);
-    Task Create(T entity);
-    Task Update(T entity);
-    Task Delete(T entity);
-    Task Save();
+    void Create(T entity);
+    void Update(T entity);
+    void Delete(T entity);
 }
 

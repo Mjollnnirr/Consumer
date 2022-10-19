@@ -4,53 +4,66 @@ using Core.Services;
 using DataAccess.Db;
 using Entity.Entities;
 
-namespace DataAccess.UOW
+namespace DataAccess.UOW;
+
+public class UnitOfWork : IUnitOfWork
 {
-    public class UnitOfWork : IDisposable
+    private bool _isDisposed;
+    private readonly AppDbContext _context;
+    private IBaseEntityRepository<Employee>? _employeeRepository;
+    private IBaseEntityRepository<Department>? _departmentRepository;
+
+
+    public UnitOfWork(AppDbContext context)
     {
-        private bool _isDisposed;
-        private AppDbContext _context;
-        private IBaseEntityRepository<Employee>? _employeeRepository;
+        _context = context;
+        _isDisposed = false;
+    }
 
-        public UnitOfWork(AppDbContext context)
-        {
-            _context = context;
-            _isDisposed = false;
-        }
+    public async Task SaveAsync()
+    {
+        await _context.SaveChangesAsync();
+    }
 
-        public IBaseEntityRepository<Employee> EmployeeRepository
+    public void Dispose()
+    {
+        Dispose(true);
+        GC.SuppressFinalize(this);
+    }
+
+    protected virtual void Dispose(bool disposing)
+    {
+        if (!_isDisposed)
         {
-            get
+            if (disposing)
             {
-                if (_employeeRepository is null)
-                {
-                    _employeeRepository = new RepositoryBase<Employee, AppDbContext>(_context);
-                }
-                return _employeeRepository;
+                _context.Dispose();
             }
         }
+        _isDisposed = true;
+    }
 
-        public async void Save()
+    public IBaseEntityRepository<Employee> EmployeeRepository
+    {
+        get
         {
-            await _context.SaveChangesAsync();
-        }
-
-        public void Dispose()
-        {
-            Dispose(true);
-            GC.SuppressFinalize(this);
-        }
-
-        protected virtual void Dispose(bool disposing)
-        {
-            if (!_isDisposed)
+            if (_employeeRepository is null)
             {
-                if (disposing)
-                {
-                    _context.Dispose();
-                }
+                _employeeRepository = new RepositoryBase<Employee, AppDbContext>(_context);
             }
-            _isDisposed = true;
+            return _employeeRepository;
+        }
+    }
+
+    public IBaseEntityRepository<Department> DepartmentRepository
+    {
+        get
+        {
+            if (_departmentRepository is null)
+            {
+                _departmentRepository = new RepositoryBase<Department, AppDbContext>(_context);
+            }
+            return _departmentRepository;
         }
     }
 }

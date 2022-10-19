@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Business.Services;
+using Entity.DataTransferObjects.Employee;
+using Microsoft.AspNetCore.Http;
+using CommonData.StatusCode;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -24,8 +23,15 @@ public class EmployeesController : ControllerBase
     [HttpGet]
     public async Task<IActionResult> Get()
     {
-        var data = await _employeeService.GetAll();
-        return Ok(data);
+        try
+        {
+            var data = await _employeeService.GetAll();
+            return StatusCode(StatusCodes.Status200OK, data);
+        }
+        catch (System.Exception ex)
+        {
+            return StatusCode(StatusCodes.Status404NotFound, new Response(4088, ex.Message));
+        }
     }
 
     // GET api/values/5
@@ -37,8 +43,17 @@ public class EmployeesController : ControllerBase
 
     // POST api/values
     [HttpPost]
-    public void Post([FromBody] string value)
+    public async Task<IActionResult> Post(EmployeeCreateDto employee)
     {
+        try
+        {
+            await _employeeService.Create(employee);
+            return StatusCode(StatusCodes.Status200OK, new Response(2044, "Successfully created"));
+        }
+        catch (System.Exception ex)
+        {
+            return StatusCode(StatusCodes.Status404NotFound, new Response(4055, ex.Message));
+        }
     }
 
     // PUT api/values/5

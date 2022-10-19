@@ -1,53 +1,67 @@
-﻿using System;
+﻿using AutoMapper;
+using Business.Base;
 using Business.Services;
 using Core.Services;
 using DataAccess.UOW;
-//using DataAccess.DbServices;
+using Entity.DataTransferObjects.Employee;
 using Entity.Entities;
 using Exceptions.EntityExveptions;
+using Exceptions.ProgramExceptions;
 
-namespace Business.Implementations
+namespace Business.Implementations;
+
+public class EmployeeRepository : IEmployeeService
 {
-    public class EmployeeRepository : IEmployeeService
+    private readonly IMapper _mapper;
+    private readonly IUnitOfWork _unitOfWork;
+    public EmployeeRepository(IUnitOfWork unitOfWork, IMapper mapper)
     {
-        //private readonly IEmployeeDb _employeeDb;
-        private UnitOfWork _unitOfWork;
-        private readonly IBaseEntityRepository<Employee> repository;
-        public EmployeeRepository(UnitOfWork unitOfWork)
-        {
-            _unitOfWork = unitOfWork;
-            repository = _unitOfWork.EmployeeRepository;
-        }
+        _unitOfWork = unitOfWork;
+        _mapper = mapper;
+    }
 
-        public async Task<Employee> Get(int id)
-        {
-            //var data = await _employeeDb.Get(n => n.Id == id && !n.IsDeleted);
-            var data = await repository.Get(n => n.Id == id);
-            return data;
-        }
+    public async Task<EmployeeGetDto> Get(int id)
+    {
+        var dbData = await _unitOfWork.EmployeeRepository.Get(expression: n => n.Id == id && !n.IsDeleted);
+        var data = _mapper.Map<EmployeeGetDto>(dbData);
+        if (data is null)
+            throw new DataMappingException();
+        return data;
+    }
 
-        public async Task<List<Employee>> GetAll()
-        {
-            //var data = await _employeeDb.GetAll(n => !n.IsDeleted);
-            var data = await repository.GetAll(n => !n.IsDeleted, x => x.OrderByDescending(n => n.Id));
-            if (data is null) throw new EntityIsNullException();
-            return data;
-        }
+    public async Task<List<EmployeeGetDto>> GetAll()
+    {
+        var dbData = await _unitOfWork.EmployeeRepository.GetAll(
+            expression: n => !n.IsDeleted,
+            orderBy: x => x.OrderByDescending(n => n.Id));
 
-        public Task Create(Employee data)
-        {
-            throw new NotImplementedException();
-        }
+        if (dbData is null) throw new EntityIsNullException();
 
-        public Task Update(int id, Employee data)
-        {
-            throw new NotImplementedException();
-        }
+        var data = _mapper.Map<List<EmployeeGetDto>>(dbData);
 
-        public Task Delete(int id)
-        {
-            throw new NotImplementedException();
-        }
+        if (data is null)
+            throw new DataMappingException();
+
+        return data;
+    }
+
+    public async Task Create(EmployeeCreateDto entity)
+    {
+        var data = _mapper.Map<Employee>(entity);
+        if (data is null)
+            throw new DataMappingException();
+        _unitOfWork.EmployeeRepository.Create(data);
+        await _unitOfWork.SaveAsync();
+    }
+
+    public Task Update(int id, Employee entity)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task Delete(int id)
+    {
+        throw new NotImplementedException();
     }
 }
 

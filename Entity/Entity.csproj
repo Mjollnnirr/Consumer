@@ -6,12 +6,25 @@
     <Nullable>disable</Nullable>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>10.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <LangVersion>10.0</LangVersion>
+  </PropertyGroup>
   <ItemGroup>
     <None Remove="Entities\" />
     <None Remove="Base\" />
+    <None Remove="DataTransferObjects\" />
+    <None Remove="DataTransferObjects\Employee\" />
+    <None Remove="DataTransferObjects\Department\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entities\" />
     <Folder Include="Base\" />
+    <Folder Include="DataTransferObjects\" />
+    <Folder Include="DataTransferObjects\Employee\" />
+    <Folder Include="DataTransferObjects\Department\" />
   </ItemGroup>
 </Project>

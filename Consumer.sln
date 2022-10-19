@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exceptions", "Exceptions\Ex
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{DC604A2F-45E1-494D-8DF7-B32DCA7533F1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonData", "CommonData\CommonData.csproj", "{03D4FD5B-409F-4770-AFA0-B467E6DA5830}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{DC604A2F-45E1-494D-8DF7-B32DCA7533F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC604A2F-45E1-494D-8DF7-B32DCA7533F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC604A2F-45E1-494D-8DF7-B32DCA7533F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03D4FD5B-409F-4770-AFA0-B467E6DA5830}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03D4FD5B-409F-4770-AFA0-B467E6DA5830}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03D4FD5B-409F-4770-AFA0-B467E6DA5830}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03D4FD5B-409F-4770-AFA0-B467E6DA5830}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

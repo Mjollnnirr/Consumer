@@ -1,11 +1,10 @@
 ﻿using System;
-namespace Exceptions.EntityExveptions
+namespace Exceptions.EntityExveptions;
+
+public class EntityIsNullException : Exception
 {
-    public class EntityIsNullException : Exception
-    {
-        private static readonly string message = "Current enttiy is null";
-        public EntityIsNullException() : this(message) {}
-        public EntityIsNullException(string message) : base(message) {}
-    }
+    private static readonly string message = "Current enttiy is null";
+    public EntityIsNullException() : this(message) { }
+    public EntityIsNullException(string message) : base(message) { }
 }
 

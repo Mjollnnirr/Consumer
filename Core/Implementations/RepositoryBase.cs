@@ -13,11 +13,9 @@ public class RepositoryBase<TEntity, TContext> : IBaseEntityRepository<TEntity>
 {
     private readonly TContext _context;
     private readonly DbSet<TEntity> _dbSet;
-    private bool _isDisposed;
     public RepositoryBase(TContext context)
     {
         _context = context;
-        _isDisposed = false;
         _dbSet = _context.Set<TEntity>();
     }
 
@@ -79,45 +77,18 @@ public class RepositoryBase<TEntity, TContext> : IBaseEntityRepository<TEntity>
         return data;
     }
 
-    public async Task Create(TEntity entity)
+    public void Create(TEntity entity)
     {
         _context.Entry(entity).State = EntityState.Added;
-        await Save();
     }
 
-    public async Task Update(TEntity entity)
+    public void Update(TEntity entity)
     {
         _context.Entry(entity).State = EntityState.Modified;
-        await Save();
     }
 
-    public async Task Delete(TEntity entity)
+    public void Delete(TEntity entity)
     {
         _context.Entry(entity).State = EntityState.Deleted;
-        await Save();
-    }
-
-    public async Task Save()
-    {
-        await _context.SaveChangesAsync();
-    }
-
-    protected virtual void Dispose(bool disposing)
-    {
-        if (!_isDisposed)
-        {
-            if (disposing)
-            {
-                _context.DisposeAsync();
-            }
-        }
-        _isDisposed = true;
-    }
-
-    public void Dispose()
-    {
-        Dispose(true);
-        GC.SuppressFinalize(this);
     }
 }
-

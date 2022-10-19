@@ -1,0 +1,15 @@
+/Users/mjollnnirr/Projects/Consumer/CommonData/bin/Debug/net6.0/CommonData.deps.json
+/Users/mjollnnirr/Projects/Consumer/CommonData/bin/Debug/net6.0/CommonData.dll
+/Users/mjollnnirr/Projects/Consumer/CommonData/bin/Debug/net6.0/CommonData.pdb
+/Users/mjollnnirr/Projects/Consumer/CommonData/bin/Debug/net6.0/Entity.dll
+/Users/mjollnnirr/Projects/Consumer/CommonData/bin/Debug/net6.0/Entity.pdb
+/Users/mjollnnirr/Projects/Consumer/CommonData/obj/Debug/net6.0/CommonData.csproj.AssemblyReference.cache
+/Users/mjollnnirr/Projects/Consumer/CommonData/obj/Debug/net6.0/CommonData.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mjollnnirr/Projects/Consumer/CommonData/obj/Debug/net6.0/CommonData.AssemblyInfoInputs.cache
+/Users/mjollnnirr/Projects/Consumer/CommonData/obj/Debug/net6.0/CommonData.AssemblyInfo.cs
+/Users/mjollnnirr/Projects/Consumer/CommonData/obj/Debug/net6.0/CommonData.csproj.CoreCompileInputs.cache
+/Users/mjollnnirr/Projects/Consumer/CommonData/obj/Debug/net6.0/CommonData.csproj.CopyComplete
+/Users/mjollnnirr/Projects/Consumer/CommonData/obj/Debug/net6.0/CommonData.dll
+/Users/mjollnnirr/Projects/Consumer/CommonData/obj/Debug/net6.0/refint/CommonData.dll
+/Users/mjollnnirr/Projects/Consumer/CommonData/obj/Debug/net6.0/CommonData.pdb
+/Users/mjollnnirr/Projects/Consumer/CommonData/obj/Debug/net6.0/ref/CommonData.dll

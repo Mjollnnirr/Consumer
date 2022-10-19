@@ -7,5 +7,6 @@ public class Employee : BaseEntity, IEntity
 {
     public string Name { get; set; }
     public string Surname { get; set; }
+    public List<EmployeeDepartment> EmployeeDepartments { get; set; }
 }
 

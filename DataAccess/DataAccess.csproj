@@ -11,14 +11,10 @@
     <None Remove="Microsoft.EntityFrameworkCore" />
     <None Remove="Microsoft.EntityFrameworkCore.Tools" />
     <None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
-    <None Remove="DbServices\" />
-    <None Remove="DbReposiotries\" />
     <None Remove="UOW\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Db\" />
-    <Folder Include="DbServices\" />
-    <Folder Include="DbReposiotries\" />
     <Folder Include="UOW\" />
   </ItemGroup>
   <ItemGroup>
