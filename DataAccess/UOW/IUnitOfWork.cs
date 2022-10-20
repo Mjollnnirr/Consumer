@@ -7,6 +7,7 @@ namespace DataAccess.UOW
     {
         IBaseEntityRepository<Employee> EmployeeRepository { get; }
         IBaseEntityRepository<Department> DepartmentRepository { get; }
+        IBaseEntityRepository<EmployeeDepartment> EmployeeDepartmentRepository { get; }
 
         Task SaveAsync();
     }

@@ -1,7 +1,9 @@
 ﻿using System;
+using Entity.Base;
+
 namespace Entity.Entities
 {
-    public class EmployeeDepartment
+    public class EmployeeDepartment : IEntity
     {
         public int Id { get; set; }
         public int EmployeeId { get; set; }

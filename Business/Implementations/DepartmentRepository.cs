@@ -4,6 +4,7 @@ using Business.Services;
 using Core.Services;
 using DataAccess.UOW;
 using Entity.DataTransferObjects.Department;
+using Entity.DataTransferObjects.Employee;
 using Entity.Entities;
 using Exceptions.EntityExveptions;
 using Exceptions.ProgramExceptions;
@@ -41,6 +42,21 @@ namespace Business.Implementations
             var data = _mapper.Map<List<DepartmentGetDto>>(dbData);
             if (data is null)
                 throw new DataMappingException();
+            return data;
+        }
+
+        public async Task<List<EmployeeGetDto>> GetEmployeesByDepartment(int id)
+        {
+            var dbData = (await _unitOfWork.EmployeeDepartmentRepository.GetAll(
+                expression: n => n.DepartmentId == id,
+                includes: new string[] { "Employee" })).Select(n => n.Employee);
+            if (dbData is null)
+            {
+                throw new EntityIsNullException();
+            }
+
+            var data = _mapper.Map<List<EmployeeGetDto>>(dbData);
+
             return data;
         }
 

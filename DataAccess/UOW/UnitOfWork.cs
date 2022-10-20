@@ -12,6 +12,7 @@ public class UnitOfWork : IUnitOfWork
     private readonly AppDbContext _context;
     private IBaseEntityRepository<Employee>? _employeeRepository;
     private IBaseEntityRepository<Department>? _departmentRepository;
+    private IBaseEntityRepository<EmployeeDepartment>? _employeeDepartmentRepository;
 
 
     public UnitOfWork(AppDbContext context)
@@ -64,6 +65,18 @@ public class UnitOfWork : IUnitOfWork
                 _departmentRepository = new RepositoryBase<Department, AppDbContext>(_context);
             }
             return _departmentRepository;
+        }
+    }
+
+    public IBaseEntityRepository<EmployeeDepartment> EmployeeDepartmentRepository
+    {
+        get
+        {
+            if (_employeeDepartmentRepository is null)
+            {
+                _employeeDepartmentRepository = new RepositoryBase<EmployeeDepartment, AppDbContext>(_context);
+            }
+            return _employeeDepartmentRepository;
         }
     }
 }

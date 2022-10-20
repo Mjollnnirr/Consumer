@@ -52,6 +52,20 @@ namespace Consumer.Controllers
             }
         }
 
+        [HttpGet("GetEmployeesByDepartment/{departmentId}")]
+        public async Task<IActionResult> GetEmployeesByDepartment(int departmentId)
+        {
+            try
+            {
+                var data = await _departmentService.GetEmployeesByDepartment(departmentId);
+                return StatusCode(StatusCodes.Status200OK, data);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status404NotFound, new Response(4066, ex.Message));
+            }
+        }
+
         // POST api/values
         [HttpPost]
         public async Task<IActionResult> Post(DepartmentCreateDto data)

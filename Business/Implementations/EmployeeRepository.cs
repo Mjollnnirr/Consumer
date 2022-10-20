@@ -47,9 +47,16 @@ public class EmployeeRepository : IEmployeeService
 
     public async Task Create(EmployeeCreateDto entity)
     {
+        var department = await _unitOfWork.DepartmentRepository.Get(
+            expression: n => n.Id == entity.DepartmentId && !n.IsDeleted);
+
+        if (department is null)
+            throw new InvalidEntityException("Department");
+
         var data = _mapper.Map<Employee>(entity);
         if (data is null)
             throw new DataMappingException();
+
         _unitOfWork.EmployeeRepository.Create(data);
         await _unitOfWork.SaveAsync();
     }
